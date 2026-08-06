@@ -140,9 +140,7 @@ export default function StepTwo({
         )}
       </div>
 
-      {profileDoc && (
-        <DocProfileModal {...profileDoc} onClose={() => setProfileDoc(null)} />
-      )}
+      {profileDoc && <DocProfileModal {...profileDoc} />}
     </div>
   );
 }

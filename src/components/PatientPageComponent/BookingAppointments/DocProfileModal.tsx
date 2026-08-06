@@ -1,7 +1,7 @@
 import type { ISelectDoc } from "../../PatientPageComponent/BookingAppointments/StepTwo";
 import { X } from "lucide-react";
 
-export interface IDocProfile extends Omit<ISelectDoc, "availableTime"> {
+export interface IDocProfile extends ISelectDoc {
   about: string;
   availableTime: {
     day: string;

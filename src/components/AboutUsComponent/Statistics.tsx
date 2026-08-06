@@ -1,10 +1,4 @@
-import React from "react";
-import {
-  FaUserMd,
-  FaHospital,
-  FaUsers,
-  FaRobot,
-} from "react-icons/fa";
+import { FaUserMd, FaHospital, FaUsers, FaRobot } from "react-icons/fa";
 
 const statistics = [
   {
@@ -40,13 +34,12 @@ const Statistics = () => {
 
           <h2 className="mt-6 font-serif text-5xl font-bold text-white">
             Healthcare That Makes
-            <br />
-            A Difference
+            <br />A Difference
           </h2>
 
           <p className="mt-6 mx-auto max-w-3xl text-lg leading-8 text-white/80">
-            Every number represents our commitment to making healthcare
-            more connected, accessible, and patient-centered.
+            Every number represents our commitment to making healthcare more
+            connected, accessible, and patient-centered.
           </p>
         </div>
 
@@ -64,9 +57,7 @@ const Statistics = () => {
                 {stat.value}
               </h3>
 
-              <p className="mt-3 text-lg font-medium">
-                {stat.label}
-              </p>
+              <p className="mt-3 text-lg font-medium">{stat.label}</p>
             </div>
           ))}
         </div>

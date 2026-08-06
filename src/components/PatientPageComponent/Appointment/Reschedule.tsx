@@ -86,7 +86,7 @@ export default function Reschedule({
     try {
       const { appointment: updatedAppointment } =
         await appointmentService.rescheduleAppointment({
-          id: appointment._id,
+          appointmentId: appointment._id,
           date: selectedDate,
           time: selectedTime,
         });

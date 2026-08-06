@@ -1,88 +1,3 @@
-// import React from "react";
-// import { id } from "zod/locales";
-// import Heart from "../src/assets/Heart.svg";
-// import Baby from "../src/assets/Baby.svg";
-// import Health from "../src/assets/Health.svg";
-// import Tooth from "../src/assets/Tooth.svg";
-// import Bone from "../src/assets/Bone.svg";
-// import BagH from "../src/assets/BagH.svg";
-// import Obgyn from "../src/assets/OB-GYN.svg";
-// import Eye from "../src/assets/Eye.svg";
-
-// export const DepartmentData = [
-//   {
-//     id: 1,
-//     name: "Cardiology",
-//     description:
-//       "Heart and cardiovascular care. Specialized diagnostics and treatment for heart health.",
-//     specialists: 5,
-//     icon: Heart,
-//     Link: "/",
-//   },
-//   {
-//     id: 2,
-//     name: "Neurology",
-//     description:
-//       "Brain and nervous system care. Advanced neurological assessment and management.",
-//     specialists: 5,
-//     icon: Health,
-//     Link: "/",
-//   },
-//   {
-//     id: 3,
-//     name: "Pediatrics",
-//     description:
-//       "Healthcare for children and adolescents. Compassionate care for our youngest patients.",
-//     specialists: 5,
-//     icon: Baby,
-//     Link: "/",
-//   },
-//   {
-//     id: 4,
-//     name: "Dentistry",
-//     description:
-//       "Dental care and oral health. Routine checkups and specialized dental procedures.",
-//     specialists: 5,
-//     icon: Tooth,
-//     Link: "/",
-//   },
-//   {
-//     id: 5,
-//     name: "Ophthalmology",
-//     description:
-//       "Focuses on the diagnosis and treatment of eye and vision problems. Handles conditions like vision.",
-//     specialists: 5,
-//     icon: Eye,
-//     Link: "/",
-//   },
-//   {
-//     id: 6,
-//     name: "Orthopedics",
-//     description:
-//       "Bones, joints and mobility care. Advanced orthopedic surgery and rehabilitation.",
-//     specialists: 5,
-//     icon: Bone,
-//     Link: "/",
-//   },
-//   {
-//     id: 7,
-//     name: "OB-GYN",
-//     description: "Focuses on women's reproductive health and pregnancy care.",
-//     specialists: 5,
-//     icon: Obgyn,
-//     Link: "/",
-//   },
-//   {
-//     id: 8,
-//     name: "General Practice",
-//     description:
-//       "Primary and preventive care. Your first point of contact for total health management.",
-//     specialists: 5,
-//     icon: BagH,
-//     Link: "/",
-//   },
-// ];
-
 import {
   Heart,
   Brain,
@@ -104,7 +19,7 @@ import type { IDoctor } from "./types/doctor";
 
 export const departments: IDepCard[] = [
   {
-    id: 1,
+    _id: "1",
     icon: Heart,
     iconBgColor: "#FFF4F3",
     iconColor: "#FC0707",
@@ -115,7 +30,7 @@ export const departments: IDepCard[] = [
       "Heart and cardiovascular care. Specialized diagnostics and treatment for heart health.",
   },
   {
-    id: 2,
+    _id: "2",
     icon: Brain,
     iconBgColor: "#E0E7FF",
     iconColor: "#4338CA",
@@ -126,7 +41,7 @@ export const departments: IDepCard[] = [
       "Brain and nervous system care. Advanced neurological assessment and management.",
   },
   {
-    id: 3,
+    _id: "3",
     icon: Baby,
     iconBgColor: "#FEF9C3",
     iconColor: "#CA8A04",
@@ -138,7 +53,7 @@ export const departments: IDepCard[] = [
   },
 
   {
-    id: 4,
+    _id: "4",
     icon: function ToothIcon() {
       return <img src={Tooth} alt="Dentistry" />;
     },
@@ -151,7 +66,7 @@ export const departments: IDepCard[] = [
       "Dental care and oral health. Routine checkups and specialized dental procedures.",
   },
   {
-    id: 5,
+    _id: "5",
     icon: Eye,
     iconBgColor: "#F0FDF4",
     iconColor: "#16A34A",
@@ -161,7 +76,7 @@ export const departments: IDepCard[] = [
     summary: "Diagnosis and treatment of eye and vision problems.",
   },
   {
-    id: 6,
+    _id: "6",
     icon: Bone,
     iconBgColor: "#FFF7ED",
     iconColor: "#EA580C",
@@ -172,7 +87,7 @@ export const departments: IDepCard[] = [
       "Bones, joints, and mobility care. Advanced orthopedic surgery and rehabilitation.",
   },
   {
-    id: 7,
+    _id: "7",
     icon: Venus,
     iconBgColor: "#FDF2F8",
     iconColor: "#DB2777",
@@ -182,7 +97,7 @@ export const departments: IDepCard[] = [
     summary: "Women’s reproductive health and pregnancy care.",
   },
   {
-    id: 8,
+    _id: "8",
     icon: function FirstAidIcon() {
       return <img src={firstAid} alt="General Practice" />;
     },
@@ -195,7 +110,7 @@ export const departments: IDepCard[] = [
       "Primary and preventive care. Your first point of contact for total health management.",
   },
   {
-    id: 9,
+    _id: "9",
     icon: function MentalHealthIcon() {
       return <img src={icon} alt="Mental Health" />;
     },
@@ -210,7 +125,7 @@ export const departments: IDepCard[] = [
 
 export const departmentDetails: ViewDepartmentModal[] = [
   {
-    id: 1,
+    _id: "1",
     icon: Heart,
     field: "Cardiology",
     image: CardiologyImg,
@@ -224,7 +139,7 @@ export const departmentDetails: ViewDepartmentModal[] = [
     ],
   },
   {
-    id: 2,
+    _id: "2",
     icon: Brain,
     field: "Neurology",
     image: NeurologyImg,
@@ -233,7 +148,7 @@ export const departmentDetails: ViewDepartmentModal[] = [
     services: ["EEG", "MRI Scan", "Stroke Management", "Epilepsy Treatment"],
   },
   {
-    id: 3,
+    _id: "3",
     icon: Activity,
     field: "General Surgery",
     image: "/images/surgery.jpg",
@@ -247,7 +162,7 @@ export const departmentDetails: ViewDepartmentModal[] = [
     ],
   },
   {
-    id: 4,
+    _id: "4",
     icon: Baby,
     field: "Pediatrics",
     image: "/images/pediatrics.jpg",
@@ -261,7 +176,7 @@ export const departmentDetails: ViewDepartmentModal[] = [
     ],
   },
   {
-    id: 5,
+    _id: "5",
     icon: Stethoscope,
     field: "Diagnostics",
     image: "/images/diagnostics.jpg",

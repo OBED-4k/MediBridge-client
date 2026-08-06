@@ -5,7 +5,7 @@ import {
   FileText,
   MessageCircleMore,
   Astroid,
-  Settings,
+  // Settings,
 } from "lucide-react";
 
 export const patientTabs = [

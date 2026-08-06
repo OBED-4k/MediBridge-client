@@ -1,0 +1,193 @@
+@import url("https://googleapis.com");
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap");
+@import "tailwindcss";
+
+.authI {
+  background-image: url("../src/assets/bgImage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.authBgg {
+  background-image: url("../src/assets/bgImage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 950px;
+  width: 625px;
+  position: relative;
+}
+
+.authBgg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../src/assets/bgImage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(75%);
+  opacity: 50%;
+  z-index: -1;
+}
+
+.authBg {
+  position: relative;
+  overflow: hidden;
+  opacity: 0.8;
+}
+
+.authBg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../src/assets/bgImage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(75%);
+  z-index: -1;
+}
+
+.fontLibre {
+  font-family: "Abhaya Libre", serif;
+}
+.fontOutfit {
+  font-family: "Outfit", sans-serif;
+}
+
+.fontDMSans {
+  font-family: "DM Sans", sans-serif;
+}
+
+.fontISans {
+  font-family: "Instrument Sans", sans-serif;
+}
+
+.department-hero {
+  position: relative;
+  background-image: url("./assets/DepartmentImg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 591px;
+}
+
+/* Overlay */
+.department-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(40, 87, 78, 0.7);
+}
+
+/* Content stays above overlay */
+.department-content {
+  position: relative;
+  z-index: 1;
+}
+
+.aiSupport-hero {
+  position: relative;
+  background-image: url("./assets/AISupport.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 591px;
+}
+
+.aiSupport-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(40, 87, 78, 0.7);
+}
+
+.aiSupport-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* .authBg{
+  background-image: url("../src/assets/463a3ecad85c1b7bad160d490caae850ad6fd41e.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* opacity: 0.5; 
+}*/
+
+.authBgGradient {
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(171, 222, 212, 0.7),
+      rgba(255, 255, 255, 0.7),
+      rgba(46, 110, 97, 0.7)
+    ),
+    url("../src/assets/463a3ecad85c1b7bad160d490caae850ad6fd41e.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.departmentBg {
+  background-image: url("../src/assets/432ff249bf765ca32c23a965f33ce51f0da1cf5b.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 591px;
+  background-color: #28574ecc;
+}
+
+.supportBg {
+  background-image: url("../src/assets/10acabe9741a7d60feb3716f2a67b93fca740170.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 488px;
+  background-color: #28574ecc;
+}
+
+.supportBg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #28574ecc;
+  z-index: 0;
+}
+
+.supportBg > * {
+  position: relative;
+  z-index: 1;
+}
+
+.departmentBg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #28574ecc;
+  z-index: 0;
+}
+
+.departmentBg > * {
+  position: relative;
+  z-index: 1;
+}
+
+.bandGreen {
+  background: #28574e;
+}
+.bandGreen:hover {
+  background: #4f8379;
+  border: none;
+}
+
+.custom-checkbox {
+  accent-color: green;
+}
+
+.custom-checkbox:checked {
+  color: white;
+}

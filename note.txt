@@ -1,0 +1,1 @@
+npm i zod react-hook-form @hookform/resolvers

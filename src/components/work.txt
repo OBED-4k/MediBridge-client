@@ -1,0 +1,8 @@
+<div className="relative pl-8 mt-7">
+                <CiSearch className="w-4.5 h-4.5 absolute left-11 top-1/2 -translate-y-1/2 text-[#A0A0A0]" />
+                <input
+                  className="border border-[#E7E4E4] w-86 pl-9 py-2.5 rounded-md outline-none focus:border-[#28574E]"
+                  type="text"
+                  placeholder="Search departments, condition....."
+                />
+              </div>

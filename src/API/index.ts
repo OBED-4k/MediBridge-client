@@ -1,0 +1,50 @@
+import axios from "axios";
+import { AxiosError } from "axios";
+
+console.log("Base URL:", import.meta.env.VITE_BASE_URL);
+
+const api = axios.create({
+  baseURL: import.meta.env.VITE_BASE_URL,
+  headers: { "Content-Type": "application/json" },
+});
+
+api.interceptors.request.use(
+  (config) => {
+    const token =
+      localStorage.getItem("authToken") ||
+      localStorage.getItem("verificationToken");
+
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+
+    return config;
+  },
+  // api.interceptors.request.use(
+  //   (config) => {
+  //     const token = localStorage.getItem("authToken");
+  //     if (token) {
+  //       config.headers.Authorization = `Bearer ${token}`;
+  //     }
+  //     return config;
+  //   },
+  //   (error) => {
+  //     return Promise.reject(error);
+  //   },
+);
+
+api.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.response?.status === 401) {
+      console.error("Unauthorized! Redirecting to login...");
+    }
+    return Promise.reject(error);
+  },
+);
+
+export default api;
+
+export function isAxiosError(error: unknown): error is AxiosError {
+  return (error as AxiosError).isAxiosError === true;
+}

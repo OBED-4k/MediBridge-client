@@ -1,0 +1,45 @@
+//REQUIREMENTS FOR MEDIBRIDGE TO FUNCTION
+//AUTH
+//ACTIVATE ACCOUNT
+//LOGIN
+//DASHBOARD : Display, Recent activities 
+//BOOK APPOINTMENT btn - Book appointment form modals
+//Appointments - DISPLAY APPOINTMENT, DISPLAY, Medical Records
+--Reschedule, cancel, book new, view summary, book follow-up, message doctor 
+//DEPARTMENTS : Displays department card,
+//MEDICAL RECORDS : Simply displays medical consultation notes.
+//MESSAGES : Text doctor
+//AI SUPPORT : AI INTEGRATION.
+
+
+//USER NOT SIGNED IN 
+//HOMEPAGE
+//HERO - 2BTN : BOOK APPOINTMENT, CHAT WITH AI SUPPORT 
+//AI SUPPORT 
+//Footer ***
+
+
+AUTH
+FRONTEND 
+Send Form data
+
+
+
+
+BACKEND
+Create Express APPOINTMENT
+Connect DB to Server
+Create User Schema
+Create Route to Authenticate and authorize User
+
+Book Appointment
+Create Route to book appointment and project route( only valid user can book appointment)
+
+
+
+node mailer to send email
+then you create a transport system( who the mail is coming to, who is coming from and where it's going)
+
+then uou generate  a token
+then you verify you code 
+then set your password JWTPAYLOAD

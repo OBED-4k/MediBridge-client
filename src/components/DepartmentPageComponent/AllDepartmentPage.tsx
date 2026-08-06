@@ -40,8 +40,8 @@ export default function AllDepartments({ searchTerm }: Props) {
   const btnClass =
     "border border-[#E8E8E8] rounded-md p-1 disabled:opacity-50 disabled:cursor-not-allowed";
 
-  const handleViewDepartment = (departmentId: number) => {
-    const details = departmentDetails.find((d) => d.id === departmentId);
+  const handleViewDepartment = (departmentId: string) => {
+    const details = departmentDetails.find((d) => d._id === departmentId);
     if (details) {
       setSelectedDepartment(details);
     }
@@ -81,9 +81,9 @@ export default function AllDepartments({ searchTerm }: Props) {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 py-10 w-full px-20">
           {displayedDepartments.map((department) => (
             <DepartmentCard
-              key={department.id}
+              key={department._id}
               {...department}
-              onView={() => handleViewDepartment(department.id)}
+              onView={() => handleViewDepartment(department._id)}
             />
           ))}
         </div>

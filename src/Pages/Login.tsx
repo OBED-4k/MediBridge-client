@@ -24,7 +24,7 @@ type loginValues = z.infer<typeof loginSchema>;
 export default function Login() {
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const navigate = useNavigate();
-  const { login, loading, error } = useLogin();
+  const { login } = useLogin();
   const { login: loginUser } = useAuth();
 
   const {

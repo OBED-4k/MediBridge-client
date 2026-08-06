@@ -24,7 +24,7 @@ export default function Activate() {
     resolver: zodResolver(VerifyUserSchema),
   });
 
-  const { verifyUser, loading, error } = useVerifyUser();
+  const { verifyUser, loading } = useVerifyUser();
 
   const navigate = useNavigate();
 

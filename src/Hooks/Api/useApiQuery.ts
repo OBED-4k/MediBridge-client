@@ -99,7 +99,7 @@ export function useApiQuery<TRes, TArgs extends unknown[] = []>(
   useEffect(() => {
     if (!enabled) return;
 
-    void fetchData();
+    void fetchData(...([] as unknown as TArgs));
   }, [enabled, fetchData]);
 
   const reset = useCallback(() => {

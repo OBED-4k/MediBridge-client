@@ -10,6 +10,8 @@ export interface ISelectDoc {
   department: string;
   YOE: number;
   availability: boolean;
+  about?: string;
+  availableTime?: string[];
 }
 
 const Card = ({
@@ -125,7 +127,13 @@ export default function StepTwo({
                   setSelectedDoctor(doctor);
                   onSelectDoctor(doctor);
                 }}
-                onViewProfile={() => setProfileDoc(doctor)}
+                onViewProfile={() =>
+                  setProfileDoc({
+                    ...(doctor as any),
+                    about: (doctor as any).about ?? "",
+                    availableTime: (doctor as any).availableTime ?? [],
+                  })
+                }
               />
             );
           })

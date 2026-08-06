@@ -14,7 +14,6 @@ export default function RescheduledConfirmationModal({
   docName,
   day,
   time,
-  onClose,
   onMessageDoctor,
   onViewAppointment,
 }: Props) {

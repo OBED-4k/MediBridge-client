@@ -1,7 +1,7 @@
 import type { ISelectDoc } from "../../PatientPageComponent/BookingAppointments/StepTwo";
 import { X } from "lucide-react";
 
-interface IDocProfile extends ISelectDoc {
+export interface IDocProfile extends Omit<ISelectDoc, "availableTime"> {
   about: string;
   availableTime: {
     day: string;
@@ -22,9 +22,9 @@ export default function DocProfileModal({
   onClose,
 }: IDocProfile) {
   return (
-    <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
-      <div className="w-120 max-w-full max-h-[90vh] overflow-y-scroll scrollbar-none relative rounded-lg bg-white">
-        <h1 className="fontOutfit font-semibold text-[22px] px-6 py-4">
+    <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center px-4">
+      <div className="w-full max-w-md sm:max-w-lg md:max-w-2xl max-h-[90vh] overflow-y-auto scrollbar-none relative rounded-lg bg-white">
+        <h1 className="fontOutfit font-semibold text-lg sm:text-xl md:text-[22px] px-6 py-4">
           Doctor Profile
         </h1>
         <button
@@ -34,22 +34,22 @@ export default function DocProfileModal({
         >
           <X size={20} />
         </button>
-        <div className="w-full h-0.5 bg-[#E7E4E4]"></div>
+        <div className="w-full h-0.5 bg-[#E7E4E4]" />
 
-        <div className="flex gap-4 px-6 py-5">
+        <div className="flex flex-col sm:flex-row gap-4 px-6 py-5">
           <img
-            className="w-[69.8px] h-19.25 rounded-[4.01px] "
+            className="w-20 h-24 sm:w-[70px] sm:h-[77px] rounded object-cover"
             src={docImg}
             alt="doctorImg"
           />
           <div className="flex flex-col gap-1">
-            <h1 className="text-[#141313] fontOutfit font-medium text-[20px]">
+            <h1 className="text-[#141313] fontOutfit font-medium text-lg sm:text-xl">
               {docName}
             </h1>
-            <p className="text-[#605E5E] fontOutfit font-light text-[16px]">
+            <p className="text-[#605E5E] fontOutfit font-light text-sm sm:text-base">
               {department} Department
             </p>
-            <p className="text-[14px] font-normal text-[#3E3B3B] ">
+            <p className="text-sm text-[#3E3B3B]">
               {YOE} yrs Exp.{" "}
               <span
                 className={availability ? "text-green-500" : "text-red-500"}
@@ -60,16 +60,17 @@ export default function DocProfileModal({
           </div>
         </div>
 
-        <p className="font-light text-[16px] text-[#3E3B3B] px-6">{about}</p>
+        <p className="font-light text-sm sm:text-base md:text-[16px] text-[#3E3B3B] px-6">
+          {about}
+        </p>
 
-        <p className="text-[17px] font-medium fontOutfit px-6 py-3">
+        <p className="text-base sm:text-lg md:text-[17px] font-medium fontOutfit px-6 py-3">
           Availability
         </p>
 
-        <div className="text-[#3E3B3B] fontOutfit font-light text-[16px] px-6 pb-5">
+        <div className="text-[#3E3B3B] fontOutfit font-light text-sm sm:text-base md:text-[16px] px-6 pb-5">
           {availableTime.map((slot, idx) => (
             <p key={idx}>
-              {" "}
               {slot.day} – {slot.start} to {slot.end}
             </p>
           ))}

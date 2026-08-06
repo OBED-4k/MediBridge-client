@@ -4,14 +4,18 @@ import { useDoctors } from "../../../Hooks/Doctors/UseDoctors";
 import type { IDoctor } from "../../../types/doctor";
 
 export interface ISelectDoc {
-  _id: string;
+  _id?: string;
   docImg: string;
   docName: string;
   department: string;
   YOE: number;
   availability: boolean;
   about?: string;
-  availableTime?: string[];
+  availableTime?: {
+    day: string;
+    start: string;
+    end: string;
+  }[];
 }
 
 const Card = ({
@@ -90,8 +94,8 @@ export default function StepTwo({
   const { doctors, fetchDoctors, loading, error } = useDoctors();
 
   useEffect(() => {
-    fetchDoctors();
-  }, []);
+    void fetchDoctors();
+  }, [fetchDoctors]);
 
   const filteredDoctors = selectedDepartment
     ? doctors.filter(
@@ -129,9 +133,9 @@ export default function StepTwo({
                 }}
                 onViewProfile={() =>
                   setProfileDoc({
-                    ...(doctor as any),
-                    about: (doctor as any).about ?? "",
-                    availableTime: (doctor as any).availableTime ?? [],
+                    ...doctor,
+                    about: doctor.about ?? "",
+                    availableTime: doctor.availableTime ?? [],
                   })
                 }
               />
@@ -140,7 +144,9 @@ export default function StepTwo({
         )}
       </div>
 
-      {profileDoc && <DocProfileModal {...profileDoc} />}
+      {profileDoc && (
+        <DocProfileModal {...profileDoc} onClose={() => setProfileDoc(null)} />
+      )}
     </div>
   );
 }

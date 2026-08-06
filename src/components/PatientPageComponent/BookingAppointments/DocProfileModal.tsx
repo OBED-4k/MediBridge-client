@@ -2,8 +2,8 @@ import type { ISelectDoc } from "../../PatientPageComponent/BookingAppointments/
 import { X } from "lucide-react";
 
 export interface IDocProfile extends ISelectDoc {
-  about: string;
-  availableTime: {
+  about?: string;
+  availableTime?: {
     day: string;
     start: string;
     end: string;
@@ -17,8 +17,8 @@ export default function DocProfileModal({
   department,
   YOE,
   availability,
-  about,
-  availableTime,
+  about = "",
+  availableTime = [],
   onClose,
 }: IDocProfile) {
   return (

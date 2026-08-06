@@ -13,7 +13,7 @@ import firstAid from "./assets/BagH.svg";
 import icon from "./assets/Brainy.svg";
 import type { IDepCard } from "./types/department";
 import type { ViewDepartmentModal } from "./types/department";
-import CardiologyImg from "./assets/Heart.svg";
+import CardiologyImg from "./assets/10acabe9741a7d60feb3716f2a67b93fca740170.jpg";
 import NeurologyImg from "./assets/BRAIN.png";
 import type { IDoctor } from "./types/doctor";
 
